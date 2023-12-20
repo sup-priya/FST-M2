@@ -1,0 +1,12 @@
+root@e45b42b9b5d2:~# vim txtFile.txt
+root@e45b42b9b5d2:~# vim csvFile.csv
+
+root@e45b42b9b5d2:~# hdfs dfs -mkdir /user/supriya/textData
+
+root@e45b42b9b5d2:~# hdfs dfs -put ./txtFile.txt /user/supriya/textData
+root@e45b42b9b5d2:~# hdfs dfs -put ./csvFile.csv /user/supriya/textData
+
+root@e45b42b9b5d2:~# hdfs dfs -stat "type:%F permissions:%a %u:%g size:%b name:%n" /user/supriya/textD
+ata/txtFile.txt
+
+root@e45b42b9b5d2:~# hdfs dfs -stat "type:%F permissions:%a %u:%g size:%b name:%n" /user/supriya/textData/csvFile.csv
